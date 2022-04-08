@@ -9,7 +9,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'nunito', sans-serif;
-    background-color: rgba(0, 0, 0, 0.621);
+    background-color: rgb(1, 1, 107);
 }
 
 .navbar {
@@ -18,7 +18,8 @@ body {
     align-items: center;
     padding: 1rem;
     color: white;
-    background-color: rgba(173, 170, 170, 0.655);
+    background-color: rgb(170, 1, 1);
+    border-bottom: 2px solid rgb(220, 220, 0);
 }
 
 .navbar li {
@@ -31,7 +32,7 @@ body {
 }
 
 .navbar li a:hover {
-    color: rgb(83, 193, 230);
+    color: rgb(220, 220, 0);;
     text-decoration: overline;
 }
 
@@ -44,7 +45,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0.9;
-    border: 2px solid white;
+    border: 3px solid rgb(220, 220, 0);
     border-radius: 1rem;
     
 }
@@ -75,7 +76,7 @@ body {
     background-repeat: no-repeat;
     opacity: 0.9;
     margin: 4rem auto;
-    border: 2px solid white;
+    border: 3px solid rgb(220, 220, 0);
     border-radius: 1rem;
 }
 
@@ -99,14 +100,14 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     color: white;
-    background-color: rgba(128, 128, 128, 0.778);
+    background-color: rgb(170, 1, 1);
     padding: 1rem;
-    border: 1px solid white;
+    border: 2px solid rgb(220, 220, 0);
     border-radius: 1rem;
 }
 
 .grid a:hover {
-    background-color: lightblue;
+    background-color: rgb(1, 1, 107);
     border-radius: 2rem;
     transition: all ease-in-out 400ms;
 }
@@ -139,16 +140,16 @@ body {
     grid-area: eleven;
 }
 
-/* medellin */
+/* Seperate Maps */
 
 .medellin {
     width: 80vw;
-    height: 80vh;
+    max-height: 80vh;
     margin: 4rem auto;
     padding: 2rem;
-    border: 2px solid white;
+    border: 3px solid rgb(220, 220, 0);
     border-radius: 1rem;
-    background-color: rgba(173, 170, 170, 0.655);
+    background-color: rgb(170, 1, 1);
 }
 
 .container1 {
@@ -156,26 +157,110 @@ body {
     justify-content: space-between;
     align-items: center;
     color: white;
+    gap: 1rem;
 }
 
 .map-photos {
-    width: 600px;
-    height: 410px;
+    width: 50vw;
+    max-height: 70vh;
     border-radius: 1rem;
+    border: 2px solid rgb(1, 1, 107);
 }
 
 .medellin button {
     padding: .5rem 1rem;
-    background-color: rgb(30, 162, 98);
-    border: 1px solid white;
+    background-color: rgb(220, 220, 0);
+    border: 2px solid rgb(220, 220, 0);
     border-radius: 1rem;
-    color: white;
     text-transform: uppercase;
+}
+
+.medellin button a {
+    text-decoration: none;
+    color: black; 
+    font-weight: bold;
+}
+
+.medellin button a:hover {
+    color: white; 
 }
 
 .medellin button:hover {
     cursor: pointer;
-    background-color: rgba(0, 255, 255, 0.315);
+    background-color: rgb(1, 1, 107);
     transition: all ease-in-out 300ms;
 }
 
+/* Medellin Page */
+
+.nonnav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(170, 1, 1);
+    color: white;
+    border-bottom: 2px solid rgb(220, 220, 0);
+}
+
+.nonnav h1 {
+    font-size: 3vw;
+}
+
+.nonnav h2 {
+    font-size: 2.5vw;
+}
+
+.photos {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.photos img {
+    width: 50vw;
+    height: auto;
+    display: block;
+    margin: 1rem;
+    border: 2px solid rgb(220, 220, 0);
+    border-radius: 1rem;
+}
+
+.photos .img2 {
+    margin-left: auto;
+}
+
+.caption {
+    display: block;
+    color: white; 
+    margin: 1rem;
+}
+
+.caption2 {
+    text-align: right;
+}
+
+/* Media Qs */
+
+@media screen and (max-width: 800px) {
+    .container1 {
+        flex-direction: column;
+    }
+
+    .medellin {
+        max-height: 100vh;
+    }
+
+    .grid {
+        grid-gap: 4rem;
+    }
+    .grid a {
+        padding: .5rem;
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .grid {
+        grid-gap: 3rem;
+        margin-left: 15px;
+    }
+}
