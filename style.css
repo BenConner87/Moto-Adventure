@@ -568,3 +568,24 @@ body {
   .checked { 
     text-decoration: line-through;
   }
+
+  /* Jerico Add Memory */
+
+  .todo-items2 {
+    list-style: none;
+  }
+
+  .todo-input2 {
+    width: 200px;
+    border: 2px solid rgb(220, 220, 0);
+    box-shadow: 0 0 5px 0;
+    outline: none;
+    border-radius: 1em;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 1rem;
+  }
+
+  .form2 {
+    padding: 1.5em;
+  }
