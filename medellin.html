@@ -14,51 +14,86 @@
         <h2>A smooth exit .. sorta</h2>
     </div>
 
-    <section class="photos">
-        <div>
-            <img src="/medellin/one.jpeg" alt="">
-            <p class="caption">Welcome to Medellin</p>
-        </div>
-        <div>
-            <img  class="img2" src="/medellin/two.jpeg" alt="">
-            <p class="caption caption2">Lorem ipsum dolor sit amet.</p>
-        </div>
-        <div>
-            <img src="/medellin/three.jpeg" alt="">
-            <p class="caption">Lorem ipsum dolor sit amet.</p>
-        </div>
-        <div>
-            <img class="img2" src="/medellin/four.jpeg" alt="">
-            <p class="caption caption2">Lorem ipsum dolor sit amet.</p>
-        </div>
-        <div>
-            <img src="/medellin/five.jpeg" alt="">
-            <p class="caption">Lorem ipsum dolor sit amet.</p>
-        </div>
-        <div>
-            <img class="img2" src="/medellin/six.jpeg" alt="">
-            <p class="caption caption2">Lorem ipsum dolor sit amet.</p>
-        </div>
-        <div>
-            <img src="/medellin/seven.jpeg" alt="">
-            <p class="caption">Lorem ipsum dolor sit amet.</p>
-        </div>
-        <div>
-            <img class="img2" src="/medellin/eight.JPG" alt="">
-            <p class="caption caption2">Lorem ipsum dolor sit amet.</p>
-        </div>
-        <div>
-            <img src="/medellin/nine.jpeg" alt="">
-            <p class="caption">Lorem ipsum dolor sit amet.</p>
-        </div>
-        <div>
-            <img class="img2" src="/medellin/ten.jpeg" alt="">
-            <p class="caption caption2">Lorem ipsum dolor sit amet.</p>
-        </div>
-        <div>
-            <img src="/medellin/eleven.jpeg" alt="">
-            <p class="caption">Lorem ipsum dolor sit amet.</p>
-        </div>
-    </section>
+    <div class="viewport2">
+        <section class="photos">
+            <div class="box">
+                <img src="/medellin/one.jpeg" alt="">
+                <p class="caption">El Mirador de Yeyo | Welcome to Medellin</p>
+            </div>
+            <div class="box">
+                <img src="/medellin/two.jpeg" alt="">
+                <p class="caption">El Mirador de Yeyo</p>
+            </div>
+            <div class="box">
+                <img src="/medellin/three.jpeg" alt="">
+                <p class="caption">Plaza Botero</p>
+            </div>
+            <div class="box"> 
+                <img src="/medellin/four.jpeg" alt="">
+                <p class="caption">Plaza Botero</p>
+            </div>
+            <div class="box">
+                <img src="/medellin/five.jpeg" alt="">
+                <p class="caption">Comuna 13 Tour</p>
+            </div>
+            <div class="box">
+                <img src="/medellin/six.jpeg" alt="">
+                <p class="caption">Comuna 13 Tour</p>
+            </div>
+            <div class="box">
+                <img src="/medellin/seven.jpeg" alt="">
+                <p class="caption">Comuna 13 Tour</p>
+            </div>
+            <div class="box">
+                <img src="/medellin/eight.JPG" alt="">
+                <p class="caption">Survived leaving Medellin | Welcome to La Ceja</p>
+            </div>
+            <div class="box">
+                <img src="/medellin/nine.jpeg" alt="">
+                <p class="caption">Dinner and a DJ in La Ceja</p>
+            </div>
+            <div class="box">
+                <img src="/medellin/ten.jpeg" alt="">
+                <p class="caption">Blessings my son</p>
+            </div>
+            <div class="box">
+                <img src="/medellin/eleven.jpeg" alt="">
+                <p class="caption">Solid start on day 2</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="some-buttons2">
+        <button id="previous">Previous</button>
+        <button id="next">Next</button>
+    </div>
+
+    <script>
+        const next = document.getElementById('next');
+        const previous = document.getElementById('previous');
+        const photos = document.querySelector('.photos');
+
+        let current_img = 0;
+
+        next.addEventListener('click', () => {
+            if (current_img < photos.children.length - 1) {
+                current_img++
+                photos.style.transitionDuration = '0.5s';
+                photos.style.transform = `translate(-${current_img * 70}vw)`;
+                } else {
+                    return;
+                }
+        });
+
+        previous.addEventListener('click', () => {
+            if (current_img > 0) {
+                current_img--
+                photos.style.transitionDuration = '0.5s';
+                photos.style.transform = `translate(-${current_img * 70}vw)`;
+                } else {
+                    return;
+                }
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Medellin</title>
+</head>
+<body>
+    <div class="nonnav">
+        <h1>La Ceja to Aguadas</h1>
+        <h2>|</h2>
+        <h2>Local Moto Guide and Reliable Airbnb Hosts</h2>
+    </div>
+
+    <div class="viewport2">
+        <section class="photos">
+            <div class="box">
+                <img src="/Aguadas/foto1.JPG" alt="">
+                <p class="caption">Oh we bad</p>
+            </div>
+            <div class="box">
+                <img src="/Aguadas/foto2.JPG" alt="">
+                <p class="caption">hot coco break</p>
+            </div>
+            <div class="box">
+                <img src="/Aguadas/foto3.JPG" alt="">
+                <p class="caption">Lunch at El Tesoro in Sonson</p>
+            </div>
+            <div class="box"> 
+                <img src="/Aguadas/foto4.JPG" alt="">
+                <p class="caption">Moments before following a local for the ride of our life to Aguadas</p>
+            </div>
+            <div class="box">
+                <img src="Aguadas/foto5.JPG" alt="">
+                <p class="caption">Survived the death ride and enjoying a Pilsen Cerveza in Aguadas</p>
+            </div>
+            <div class="box">
+                <img src="/Aguadas/foto6.JPG" alt="">
+                <p class="caption">Made it to our Airbnb... To our hosts surprise</p>
+            </div>
+            <div class="box">
+                <img src="/Aguadas/foto7.JPG" alt="">
+                <p class="caption">Bros</p>
+            </div>
+            <div class="box">
+                <img src="/Aguadas/foto8.JPG" alt="">
+                <p class="caption">HellofA View</p>
+            </div>
+            <div class="box">
+                <img src="/Aguadas/foto9.JPG" alt="">
+                <p class="caption">Drink it in</p>
+            </div>
+            <div class="box">
+                <img src="/Aguadas/foto10.JPG" alt="">
+                <p class="caption">Taste</p>
+            </div>
+            <div class="box">
+                <img src="/Aguadas/foto11.JPG" alt="">
+                <p class="caption">Head in the clouds</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="some-buttons2">
+        <button id="previous">Previous</button>
+        <button id="next">Next</button>
+    </div>
+
+    <script>
+        const next = document.getElementById('next');
+        const previous = document.getElementById('previous');
+        const photos = document.querySelector('.photos');
+
+        let current_img = 0;
+
+        next.addEventListener('click', () => {
+            if (current_img < photos.children.length - 1) {
+                current_img++
+                photos.style.transitionDuration = '0.5s';
+                photos.style.transform = `translate(-${current_img * 70}vw)`;
+                } else {
+                    return;
+                }
+        });
+
+        previous.addEventListener('click', () => {
+            if (current_img > 0) {
+                current_img--
+                photos.style.transitionDuration = '0.5s';
+                photos.style.transform = `translate(-${current_img * 70}vw)`;
+                } else {
+                    return;
+                }
+        });
+    </script>
+</body>
+</html>
