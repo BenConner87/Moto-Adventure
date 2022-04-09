@@ -1,3 +1,4 @@
+// DOM Cache for Photo Scroll
 const next = document.getElementById('next');
 const previous = document.getElementById('previous');
 const images = document.querySelector('.medellin');
