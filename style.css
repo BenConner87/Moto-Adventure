@@ -12,6 +12,8 @@ body {
     background-color: rgb(1, 1, 107);
 }
 
+/* NAVBAR */
+
 .navbar {
     display: flex;
     justify-content: space-evenly;
@@ -35,6 +37,8 @@ body {
     color: rgb(220, 220, 0);;
     text-decoration: overline;
 }
+
+/* TITLE AND PICTURE */
 
 .main {
     margin: 4rem auto;
@@ -66,6 +70,8 @@ body {
     opacity: 1;
     text-decoration: underline;
 }
+
+/* BIG MAP */
 
 .map {
     background-image: url(/homepage.jpeg);
@@ -188,6 +194,53 @@ body {
     transition: all ease-in-out 300ms;
 }
 
+/* Index Page View-Port Changes */
+
+.some-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.some-buttons button {
+  padding: 1rem;
+  width: 10rem;
+  height: 3rem;
+  margin: 1.5rem ;
+  background-color: rgb(220, 220, 0);
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 2px solid rgb(220, 220, 0);
+  border-radius: 1rem;
+}
+
+.some-buttons button:hover {
+  cursor: pointer;
+  background-color: rgb(170, 1, 1);
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+}
+
+.viewport {
+  width: 70vw;
+  height: 70vh;
+  overflow: hidden;
+  margin: 0 auto;
+  background-color: rgb(170, 1, 1);
+  border: 2px solid rgb(220, 220, 0);
+  border-radius: 1rem;
+}
+
+.viewport .container1 {
+  width: 70vw;
+  height: 70vh;
+  margin: 0 auto;
+}
+
 /* Medellin Page */
 
 .nonnav {
@@ -287,60 +340,33 @@ body {
         padding: .5rem;
         font-size: .8rem;
     }
+
+    /* INDEX PAGE VIEWPORT */
+    .viewport {
+      width: 70vw;
+    }
+
+    .viewport .container1 {
+      width: 70vw;
+    }
+
+    .map-photos {
+      width: 300px;
+      height: 180px;
+    }
+
+    .container1 {
+      line-height: .5;
+      gap: .5rem
+  }
 }
+
 
 @media screen and (max-width: 600px) {
     .grid {
         grid-gap: 3rem;
         margin-left: 15px;
     }
-}
-
-/* Index Page View-Port Changes */
-
-.some-buttons {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.some-buttons button {
-    padding: 1rem;
-    width: 10rem;
-    height: 3rem;
-    margin: 1.5rem ;
-    background-color: rgb(220, 220, 0);
-    text-transform: uppercase;
-    font-weight: bold;
-    border: 2px solid rgb(220, 220, 0);
-    border-radius: 1rem;
-}
-
-.some-buttons button:hover {
-    cursor: pointer;
-    background-color: rgb(170, 1, 1);
-}
-
-.flex-container {
-    display: flex;
-    flex-direction: row;
-    width: fit-content;
-}
-
-.viewport {
-    width: 70vw;
-    height: 70vh;
-    overflow: hidden;
-    margin: 0 auto;
-    background-color: rgb(170, 1, 1);
-    border: 2px solid rgb(220, 220, 0);
-    border-radius: 1rem;
-}
-
-.viewport .container1 {
-    width: 70vw;
-    height: 70vh;
-    margin: 0 auto;
 }
 
 /* Add a Memory Medellin*/
