@@ -113,6 +113,7 @@ body {
 }
 
 .grid a:hover {
+    cursor:default;
     background-color: rgb(1, 1, 107);
     border-radius: 2rem;
     transition: all ease-in-out 400ms;
