@@ -632,3 +632,24 @@ body {
     .form4 {
       padding: 1.5em;
     }
+
+        /* el_cielo Add Memory */
+
+        .todo-items5 {
+          list-style: none;
+        }
+      
+        .todo-input5 {
+          width: 200px;
+          border: 2px solid rgb(220, 220, 0);
+          box-shadow: 0 0 5px 0;
+          outline: none;
+          border-radius: 1em;
+          padding: 10px;
+          margin-right: 10px;
+          font-size: 1rem;
+        }
+      
+        .form5 {
+          padding: 1.5em;
+        }
