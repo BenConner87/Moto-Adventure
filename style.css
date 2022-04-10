@@ -590,3 +590,45 @@ body {
   .form2 {
     padding: 1.5em;
   }
+
+    /* Jardin Add Memory */
+
+    .todo-items3 {
+      list-style: none;
+    }
+  
+    .todo-input3 {
+      width: 200px;
+      border: 2px solid rgb(220, 220, 0);
+      box-shadow: 0 0 5px 0;
+      outline: none;
+      border-radius: 1em;
+      padding: 10px;
+      margin-right: 10px;
+      font-size: 1rem;
+    }
+  
+    .form3 {
+      padding: 1.5em;
+    }
+
+    /* Retiro Add Memory */
+
+    .todo-items4 {
+      list-style: none;
+    }
+  
+    .todo-input4 {
+      width: 200px;
+      border: 2px solid rgb(220, 220, 0);
+      box-shadow: 0 0 5px 0;
+      outline: none;
+      border-radius: 1em;
+      padding: 10px;
+      margin-right: 10px;
+      font-size: 1rem;
+    }
+  
+    .form4 {
+      padding: 1.5em;
+    }
