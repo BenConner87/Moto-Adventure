@@ -130,52 +130,40 @@
         </ul>
     </div>
 
-    <!-- JAVASCRIPT -->
-
     <script>
-
-    // DOM CACHE FOR PICTURE SCROLL
-        const next = document.getElementById('next');
-        const previous = document.getElementById('previous');
+        // DOM FOR PICTURE SCROLL pages
         const photos = document.querySelector('.photos');
-
-    // DOM CACHE FOR ADD MEMORY 
-        const todoForm = document.querySelector('.form2');          //todo form
-        const todoInput = document.querySelector('.todo-input2');        //input box
-        const todoItemsList = document.querySelector('.todo-items2');
-
-    // PICTURE SCROLL JAVASCRIPT
-
-        let current_img = 0;
-
+        // DOM for memory jerico
+        const todoForm2 = document.querySelector('.form2');          
+        const todoInput2 = document.querySelector('.todo-input2');       
+        const todoItemsList2 = document.querySelector('.todo-items2');
+        // PICTURE SCROLL pages
         next.addEventListener('click', () => {
-            if (current_img < photos.children.length - 1) {
-                current_img++
-                photos.style.transitionDuration = '0.5s';
-                photos.style.transform = `translate(-${current_img * 70}vw)`;
-                } else {
-                    return;
-                }
-        });
+                if (current_img < photos.children.length - 1) {
+                    current_img++
+                    photos.style.transitionDuration = '0.5s';
+                    photos.style.transform = `translate(-${current_img * 70}vw)`;
+                    } else {
+                        return;
+                    }
+            });
 
-        previous.addEventListener('click', () => {
-            if (current_img > 0) {
-                current_img--
-                photos.style.transitionDuration = '0.5s';
-                photos.style.transform = `translate(-${current_img * 70}vw)`;
-                } else {
-                    return;
-                }
-        });
-
-         // ADD MEMORY JAVASCRIPT 
-
-         let todos2 = [];   // array for ToDo's
+            previous.addEventListener('click', () => {
+                if (current_img > 0) {
+                    current_img--
+                    photos.style.transitionDuration = '0.5s';
+                    photos.style.transform = `translate(-${current_img * 70}vw)`;
+                    } else {
+                        return;
+                    }
+            });
+        // ADD MEMORY JERICO 
+        let todos2 = [];   // array for ToDo's
 
         // event listener for form 
-        todoForm.addEventListener('submit', function(event) {
+        todoForm2.addEventListener('submit', function(event) {
             event.preventDefault();     //prevent page from reloading when submitting form
-            addTodo(todoInput.value);   // call addTodo function with input box value
+            addTodo(todoInput2.value);   // call addTodo function with input box value
         });
 
         // add ToDo function 
@@ -188,12 +176,12 @@
             };
                 todos2.push(todo);           //add item to array
                 addToLocalStorage(todos2)    // stores and then run the render function 
-                todoInput.value = '';       // clears text box
+                todoInput2.value = '';       // clears text box
             }
         };
 
         function renderTodos(todos2) {               // renders to the <ul> takes the array as arguments
-            todoItemsList.innerHTML = '';           // clears the <ul> 
+            todoItemsList2.innerHTML = '';           // clears the <ul> 
             todos2.forEach(function(item) {          // loops through array   
                 const checked = item.completed ? 'checked' : null;      // checks if item is completed
                 const li = document.createElement('li');                // create <li>
@@ -205,7 +193,7 @@
                 li.innerHTML = `<input type="checkbox" class="checkbox" ${checked}>  
                 ${item.name}
                 <button class="delete-button">X</button>`;
-                todoItemsList.append(li);                               // assign <li> to <ul>
+                todoItemsList2.append(li);                               // assign <li> to <ul>
             });
         }    
 
@@ -240,15 +228,14 @@
 
         getFromLocalStorage();                                              // initialize function to get storage and show 
 
-        todoItemsList.addEventListener('click', function(event) {           // function listen to delete and check 'clicks'
+        todoItemsList2.addEventListener('click', function(event) {           // function listen to delete and check 'clicks'
             if (event.target.type === 'checkbox') {                                          // if click is checkbox 
                 toggle(event.target.parentElement.getAttribute('data-key'));                 // toggle the state
             }
             if (event.target.classList.contains('delete-button')) {                          // if click is delete
                 deleteTodo(event.target.parentElement.getAttribute('data-key'));  // (get id from data-key attributes value                   
             }                                                                     // of parent <li> where the delte-button 
-        });                                                                       // is present.)
-
+        });
     </script>
 </body>
 </html>

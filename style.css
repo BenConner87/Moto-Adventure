@@ -390,11 +390,11 @@ body {
     font-size: 2rem;
   }
 
-  .form {
+  .form, .form6 {
     padding: 1.5em;
   }
   
-  .todo-input {
+  .todo-input, .todo-input6 {
     width: 200px;
     border: 2px solid rgb(220, 220, 0);
     box-shadow: 0 0 5px 0;
@@ -424,7 +424,7 @@ body {
     margin: 2vw 10vw;
   }
 
-  .todo-items {
+  .todo-items, .todo-items6 {
     list-style: none;
   }
   
